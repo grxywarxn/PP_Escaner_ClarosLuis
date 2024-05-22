@@ -62,16 +62,6 @@ namespace Entidades
 
         public static bool operator ==(Escaner e, Documento d)
         {
-            //bool retorno = false;
-            //foreach (Documento d2 in e.ListaDocumentos)
-            //{
-            //    if (d2 == d)
-            //    {
-            //        retorno = true;
-            //        break;
-            //    }
-            //}
-            //return retorno;
             bool retorno = false;
             if (e.Tipo == TipoDoc.mapa)
             {
@@ -123,7 +113,7 @@ namespace Entidades
             
             bool retorno = false;
             
-            if (!(e == d && d.Estado == Documento.Paso.Inicio))
+            if (!(e == d) && d.Estado == Documento.Paso.Inicio)
             {
                d.AvanzarEstado();
                  e.ListaDocumentos.Add(d);
