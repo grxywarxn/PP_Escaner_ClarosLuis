@@ -120,7 +120,7 @@ namespace Entidades
 
         public static bool operator +(Escaner e, Documento d)
         {
-            //hacer que el escaner verifique que sea del mismo tipo que el documento que entra
+            
             bool retorno = false;
             
             if (!(e == d && d.Estado == Documento.Paso.Inicio))
